@@ -7,7 +7,8 @@ typedef struct Node {
 }Node;
 
 Node * insert( Node *head, int data ) {
-    Node *new_ptr = (Node *) malloc( sizeof(Node));
+
+    Node *new_ptr = (Node *) malloc( sizeof(Node) );
     
     if ( !new_ptr ) {
         return NULL;
@@ -33,21 +34,24 @@ Node * insert( Node *head, int data ) {
 }
 
 void display( Node *head ) {
-    Node *start=head;
+
+    Node *start = head;
     
-    while( start ) {
-        printf("%d ",start->data);
-        start=start->next;
+    while ( start ) {
+        printf("%d ", start->data);
+        start = tart->next;
     }
+
 }
 
 int main() {
+
     int T, data;
     Node *head = NULL;    
     
     scanf("%d", &T);
     
-    while( T-- ){
+    while ( T-- ) {
         scanf("%d", &data);
         head = insert( head, data );
     }
@@ -55,4 +59,5 @@ int main() {
     display( head );
 
     return 0;
+
 }

@@ -20,5 +20,7 @@ int main() {
     	printf("%d ", arr[arr_i]);
     }
 
+    free( arr );
+
     return 0;
 }
